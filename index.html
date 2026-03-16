@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KYC Events Style Hero</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#e8e2d9;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+padding:15px;
+background:#efe9df;
+font-size:12px;
+letter-spacing:1px;
+}
+
+header a{
+text-decoration:none;
+color:#555;
+font-weight:600;
+font-family:"Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-style:italic;
+text-transform:uppercase;
+letter-spacing:1.5px;
+padding:6px 10px;
+border-radius:999px;
+transition:background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+header a:hover{
+background:rgba(208,76,155,0.16);
+color:#d04c9b;
+transform:translateY(-1px);
+}
+.logo{
+font-size:28px;
+font-family:'Great Vibes', 'Playfair Display', cursive;
+letter-spacing:1px;
+color:#d04c9b;
+font-weight:400;
+}
+.active-link{
+background:rgba(208,76,155,0.20);
+color:#d04c9b;
+border-bottom:2px solid #d04c9b;
+}
+
+/* HERO IMAGE GRID */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:40px;
+padding:40px;
+position:relative;
+}
+
+.hero img{
+width:100%;
+height:650px;
+object-fit:cover;
+}
+
+/* CENTER BOX */
+
+.center-box{
+position:absolute;
+left:50%;
+top:88%;
+height: 160px;
+transform:translate(-50%,-50%);
+background:white;
+max-width:760px;
+width: 640px;;
+padding:18px 40px;
+text-align:center;
+display:grid;
+place-items:center;
+gap:8px;
+box-shadow:0 10px 28px rgba(0,0,0,0.12);
+}
+
+.center-box h2{
+font-family:"Playfair Display", "Georgia", serif;
+font-weight:700;
+font-style:italic;
+letter-spacing:0.6px;
+font-size:22px;
+/* margin:0; */
+}
+
+.center-box small{
+display:block;
+font-family:Arial, "Helvetica Neue", sans-serif;
+font-size:10px;
+letter-spacing:2.5px;
+color:#999;
+text-transform:uppercase;
+/* margin:0; */
+}
+
+.center-box .cta{
+font-family:Arial, "Helvetica Neue", sans-serif;
+font-size:7px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#111;
+text-decoration:none;
+border-bottom:1px solid rgba(255, 0, 0, 0.2);
+border-bottom-color: rgb(227, 73, 73);
+padding-top:8px;
+}
+
+/* INTRO TEXT */
+
+.intro{
+text-align:center;
+padding:60px 20px;
+max-width:700px;
+margin:auto;
+color:#6b6b6b;
+}
+
+.intro h3{
+color:#666;
+font-weight:500;
+margin-bottom:15px;
+}
+
+.leaf{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.journey{
+text-align:center;
+margin:60px auto 40px;
+}
+
+.journey .pill{
+position:relative;
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:14px 26px;
+border-radius:999px;
+background:rgba(255,255,255,0.18);
+border:1px solid rgba(208,76,155,0.25);
+color:#7d7d7d;
+text-decoration:none;
+font-weight:600;
+letter-spacing:1px;
+overflow:hidden;
+backdrop-filter:blur(10px);
+transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.journey .pill::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(120deg, rgba(255,255,255,0.2), rgba(206, 81, 156, 0.75));
+opacity:0.25;
+transition:opacity .2s ease;
+}
+
+.journey .pill:hover::before{
+opacity:0.6;
+}
+
+.journey .pill span,
+.journey .pill{
+position:relative;
+z-index:1;
+}
+
+.journey .pill:hover{
+transform:translateY(-3px);
+box-shadow:0 14px 28px rgba(208,76,155,0.35);
+}
+
+.portfolios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:28px;
+max-width:1120px;
+margin:0 auto 60px;
+padding:0 20px;
+}
+
+.portfolio-card{
+position:relative;
+background:#fff;
+border:1px solid rgba(208,76,155,0.2);
+/* border-radius:18px; */
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.portfolio-card::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(140deg, rgba(208,76,155,0.18), rgba(255,255,255,0));
+opacity:0;
+transition:opacity .2s ease;
+}
+
+.portfolio-card:hover{
+transform:translateY(-6px);
+box-shadow:0 16px 40px rgba(0,0,0,0.12);
+}
+
+.portfolio-card:hover::after{
+opacity:1;
+}
+
+.portfolio-card img{
+width:100%;
+display:block;
+}
+
+.portfolio-card-body{
+padding:18px 16px 22px;
+text-align:center;
+}
+
+.portfolio-card-body h4{
+margin:0 0 6px;
+font-size:16px;
+font-weight:600;
+color:#2b2b2b;
+}
+
+.portfolio-card-body small{
+display:block;
+font-size:11px;
+color:#777;
+letter-spacing:0.8px;
+margin-bottom:14px;
+}
+
+.portfolio-card-body a{
+display:inline-flex;
+align-items:center;
+gap:8px;
+font-size:11px;
+letter-spacing:1px;
+color:#d04c9b;
+text-decoration:none;
+}
+
+.portfolio-card-body a span{
+display:inline-flex;
+width:14px;
+height:14px;
+border-radius:50%;
+background:rgba(208,76,155,0.2);
+align-items:center;
+justify-content:center;
+font-size:10px;
+}
+
+.view-all{
+display:inline-block;
+margin:0 auto 60px;
+padding:12px 26px;
+border:1px solid rgba(208,76,155,0.3);
+border-radius:999px;
+color:#2b2b2b;
+text-decoration:none;
+letter-spacing:1px;
+font-weight:600;
+transition:background .2s ease, transform .2s ease;
+}
+
+.view-all:hover{
+background:rgba(208,76,155,0.1);
+transform:translateY(-2px);
+}
+
+.journey{
+text-align:center;
+margin:70px 0 40px;
+}
+
+.pill{
+display:inline-block;
+background:#d9c5b4;
+padding:16px 60px;
+border-radius:40px;
+font-size:18px;
+color:white;
+letter-spacing:1px;
+}
+
+.portfolios{
+display:flex;
+justify-content:center;
+gap:40px;
+max-width:1200px;
+margin:40px auto;
+}
+
+.portfolio-card{
+width:260px;
+background:white;
+border:1px solid #e3a38f;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.portfolio-card img{
+width:100%;
+height:420px;
+object-fit:cover;
+}
+
+.portfolio-card-body{
+padding:20px;
+text-align:center;
+}
+
+.portfolio-card-body h4{
+margin:0;
+font-size:18px;
+color:#444;
+}
+
+.portfolio-card-body small{
+display:block;
+margin-top:6px;
+color:#888;
+}
+
+.portfolio-card-body a{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-top:12px;
+font-size:11px;
+letter-spacing:2px;
+text-decoration:none;
+color:#d04c9b;
+}
+
+.portfolio-card-body span{
+width:16px;
+height:16px;
+border-radius:50%;
+background:#f4d7e6;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:9px;
+}
+
+.view-all{
+display:inline-block;
+margin:50px auto;
+padding:12px 30px;
+border:1px solid #e3a38f;
+color:#444;
+text-decoration:none;
+font-size:12px;
+letter-spacing:1px;
+}
+
+/* TESTIMONIAL */
+
+.testimonial-section{
+text-align:center;
+/* margin-top:0px; */
+}
+
+.testimonial-section h2{
+font-family:"Playfair Display",serif;
+font-size:26px;
+margin-bottom:30px;
+color:#555;
+}
+
+.leaf-icon{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.testimonial-box{
+background:#f1ede6;
+max-width:750px;
+margin:auto;
+padding:40px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.testimonial-box p{
+font-size:14px;
+line-height:1.7;
+color:#666;
+}
+
+.client-name{
+display:block;
+margin-top:15px;
+color:#d04c9b;
+font-size:13px;
+}
+
+/* SEO LINKS */
+
+.seo-links{
+text-align:center;
+max-width:900px;
+margin:40px auto;
+font-size:11px;
+color:#777;
+line-height:1.8;
+}
+
+/* INSTAGRAM */
+
+.instagram{
+text-align:center;
+margin-top:60px;
+}
+
+.instagram h2{
+font-family:"Playfair Display",serif;
+margin-bottom:30px;
+}
+
+.insta-gallery{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+max-width:900px;
+margin:auto;
+}
+
+.insta-gallery img{
+width:130px;
+height:120px;
+object-fit:cover;
+}
+
+/* FOOTER LINKS */
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:60px;
+text-align:center;
+}
+
+.footer-column h3{
+font-family:"Playfair Display",serif;
+margin-bottom:15px;
+}
+
+.footer-column p{
+font-size:12px;
+color:#666;
+letter-spacing:1px;
+}
+
+.divider{
+width:1px;
+height:120px;
+background:#cfc8bf;
+}
+
+
+/* FINAL FOOTER */
+
+footer{
+text-align:center;
+margin-top:40px;
+padding-bottom:40px;
+}
+
+.footer-logo{
+font-family:"Great Vibes",cursive;
+font-size:48px;
+color:#d04c9b;
+margin-bottom:10px;
+}
+
+.address{
+font-size:12px;
+color:#666;
+max-width:700px;
+margin:auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="#" class="active-link">HOME</a>
+<a href="#">ABOUT</a>
+<a href="destination_pg.html">DESTINATION<br><span style="align-items: center;">WEDDING</span></a>
+<a href="#">SERVICES</a>
+
+<div class="logo">kyc</div>
+
+<a href="#">BOOK<br>  VENUE</a>
+<a href="#">GALLERY</a>
+<a href="#">NEWS</a>
+<a href="#">BLOG</a>
+
+</header>
+
+
+
+<section class="hero">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+
+<img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b">
+
+<div class="center-box">
+<small>🍃</small>
+<small>LEGENDARY EVENTS</small>
+
+<h2>Luxury Weddings<br>&amp; Parties</h2>
+
+<a class="cta" href="#">BOOK A CONSULT</a>
+
+</div>
+
+</section>
+
+
+
+<section class="intro">
+
+<div class="leaf">❧</div>
+
+<h3>KYC Events – Wedding Planners in India</h3>
+
+<p>
+Hey there. Welcome to your one-stop destination for all things weddings.
+We are thrilled to take you on an extraordinary journey of love,
+celebration and unforgettable memories. Our team crafts
+luxury destination weddings and unique events across India.
+</p>
+
+</section>
+
+<section class="journey">
+
+<div class="pill">
+▶ KYC Journey
+</div>
+
+</section>
+
+
+<section class="portfolios">
+
+<div class="portfolio-card">
+
+<img src="https://images.unsplash.com/photo-1606800052052-a08af7148866">
+
+<div class="portfolio-card-body">
+
+<h4>Akshay Weds Dharinee</h4>
+
+<small>Aurika, Udaipur</small>
+
+<a href="#">
+<span>▶</span>
+WEDDING TRAILER
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa">
+
+<div class="portfolio-card-body">
+
+<h4>Siddharth Weds Jasmine</h4>
+
+<small>Fairmont, Jaipur</small>
+
+<a href="#">
+<span>▶</span>
+WEDDING TRAILER
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+
+<div class="portfolio-card-body">
+
+<h4>Rishi Weds Roshni</h4>
+
+<small>JA Resort, Dubai</small>
+
+<a href="#">
+<span>▶</span>
+WEDDING TRAILER
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div style="text-align:center">
+
+<a class="view-all" href="#">
+VIEW ALL PORTFOLIOS
+</a>
+
+</div>
+
+<script>
+
+/* simple fade effect for hero images */
+
+const imgs=document.querySelectorAll(".hero img")
+
+imgs.forEach((img,i)=>{
+img.style.opacity=0
+setTimeout(()=>{
+img.style.transition="1.2s"
+img.style.opacity=1
+},300*i)
+})
+
+</script>
+
+<!-- CLIENT TESTIMONIAL -->
+
+<section class="testimonial-section">
+
+<div class="leaf-icon">🍃</div>
+
+<h2>What Client’s Say</h2>
+
+<div class="testimonial-box">
+
+<p>
+"If you thought that a wedding album was complete without shots of the standard
+bridal lehenga twirl, excited pouts and poses, cheer of the ladkiwale and the
+ladkawale, quirky props and photo booths or the candidness of the bride and the
+groom, then you may want to think again. You sure want to capture every moment
+that has added magic to your once-in-a-lifetime occasion."
+</p>
+
+<span class="client-name">Mr. Dinesh Punia</span>
+
+</div>
+
+</section>
+
+<!-- SEO LINKS -->
+
+<section class="seo-links">
+
+<p>
+Wedding Planners In India | List Of Wedding Planners In Mumbai |
+Wedding Planners In Delhi | Wedding Planners In Nagpur |
+Top 10 Wedding Planners In Navi Mumbai |
+Wedding Planners In Maharashtra |
+Wedding Planners In Jaipur |
+Wedding Planners In Goa |
+Budget Wedding Planners In Mumbai |
+Destination Wedding Planners In Delhi |
+Wedding Planners In Pune
+</p>
+
+</section>
+
+<!-- INSTAGRAM -->
+
+<section class="instagram">
+
+<h2>Instagram</h2>
+
+<div class="insta-gallery">
+
+<img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde">
+<img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e">
+<img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622">
+<img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330">
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed">
+<img src="https://images.unsplash.com/photo-1529636798458-92182e662485">
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER LINKS -->
+
+<section class="footer-links">
+
+<div class="footer-column">
+
+<h3>Social</h3>
+
+<p>INSTAGRAM</p>
+<p>FACEBOOK</p>
+<p>TWITTER</p>
+<p>YOU TUBE</p>
+
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<p>HOME</p>
+<p>SERVICES</p>
+<p>BOOK APPOINTMENT</p>
+<p>SITE MAP</p>
+
+</div>
+
+</section>
+
+<!-- FINAL FOOTER -->
+
+<footer>
+
+<div class="footer-logo">kyc</div>
+
+<p class="address">
+1005 A, 10th Floor, B - Wing, Kanakia Wall Street, Chakala,
+Andheri Kurla Road, Andheri (East), Mumbai - 400093.
+</p>
+
+</footer>
+
+</body>
+</html>

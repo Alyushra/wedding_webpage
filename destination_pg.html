@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indian Destinations</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Georgia, serif;
+background:#ded8ce;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+padding:15px;
+background:#efe9df;
+font-size:12px;
+letter-spacing:1px;
+}
+
+header a{
+text-decoration:none;
+color:#555;
+font-weight:600;
+font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+font-style:italic;
+text-transform:uppercase;
+letter-spacing:1.5px;
+padding:6px 10px;
+border-radius:999px;
+transition:background 0.2s ease,color 0.2s ease,transform 0.2s ease;
+}
+
+header a:hover{
+background:rgba(208,76,155,0.16);
+color:#d04c9b;
+transform:translateY(-1px);
+}
+
+.active-link{
+background:rgba(208,76,155,0.20);
+color:#d04c9b;
+border-bottom:2px solid #d04c9b;
+}
+
+.logo{
+font-size:28px;
+font-family:'Great Vibes','Playfair Display',cursive;
+letter-spacing:1px;
+color:#d04c9b;
+font-weight:400;
+}
+
+/* TAB SECTION */
+
+.tabs{
+width:80%;
+margin:40px auto;
+display:flex;
+}
+
+.tab{
+flex:1;
+text-align:center;
+padding:18px;
+font-size:24px;
+cursor:pointer;
+}
+
+.active{
+background:#f2f2f2;
+border-bottom:4px solid #c17a57;
+}
+
+.inactive{
+background:#ded8ce;
+border-bottom:3px solid #999;
+}
+
+/* TAB SECTION */
+
+.tabs{
+width:80%;
+margin:40px auto;
+display:flex;
+}
+
+.tab{
+flex:1;
+text-align:center;
+padding:18px;
+font-size:24px;
+cursor:pointer;
+}
+
+.active{
+background:#f2f2f2;
+border-bottom:4px solid #c17a57;
+}
+
+.inactive{
+background:#ded8ce;
+border-bottom:3px solid #999;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+font-size:48px;
+margin:60px 0 40px;
+color:#555;
+}
+
+/* DESTINATION GRID */
+
+.grid{
+width:85%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+/* CARD */
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+.card p{
+margin-top:10px;
+font-size:18px;
+}
+
+/* DESTINATION HERO */
+
+.destination-hero{
+width:90%;
+margin:80px auto;
+display:flex;
+align-items:center;
+gap:40px;
+position:relative;
+
+background-image:url("Gemini_Generated_Image_kmtj34kmtj34kmtj.png");
+background-size:cover;
+background-position:center;
+}
+
+/* light overlay for opacity */
+
+.destination-hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.75); /* increase number for lighter background */
+z-index:0;
+}
+
+/* keep content above overlay */
+
+.destination-overlay,
+.wedding-cards{
+position:relative;
+z-index:1;
+}
+
+/* LEFT TEXT */
+
+.destination-overlay{
+flex:1;
+}
+
+.destination-overlay h1{
+font-size:48px;
+margin-bottom:10px;
+margin-left: 20px;
+}
+
+.destination-overlay p{
+font-size:18px;
+margin-bottom:25px;
+color:#777;
+margin-left: 20px;
+}
+
+.destination-overlay button{
+padding:12px 28px;
+border:none;
+background:#e7c7a9;
+color:#333;
+font-size:14px;
+border-radius:4px;
+cursor:pointer;
+margin-left: 20px;
+}
+
+.destination-overlay button:hover{
+background:#d8b291;
+margin-left: 20px;
+}
+
+/* RIGHT CARDS */
+
+.wedding-cards{
+flex:2;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.w-card{
+height:180px;
+position:relative;
+overflow:hidden;
+border-radius:6px;
+}
+
+.w-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.w-overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:15px;
+color:white;
+}
+
+.w-overlay h3{
+font-size:16px;
+margin:0;
+}
+
+.w-overlay p{
+font-size:12px;
+margin:5px 0 10px;
+}
+
+.w-btn{
+background:#ff8c32;
+width: 40%;
+border:none;
+color:white;
+padding:6px 12px;
+border-radius:20px;
+cursor:pointer;
+font-size:12px;
+}
+
+.w-btn:hover{
+background:#ff7a1a;
+}
+
+/* FOOTER */
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:60px;
+text-align:center;
+}
+
+.footer-column h3{
+font-family:"Playfair Display",serif;
+margin-bottom:15px;
+}
+
+.footer-column p{
+font-size:12px;
+color:#666;
+letter-spacing:1px;
+}
+
+.divider{
+width:1px;
+height:120px;
+background:#cfc8bf;
+}
+
+footer{
+text-align:center;
+margin-top:40px;
+padding-bottom:40px;
+}
+
+.footer-logo{
+font-family:"Great Vibes",cursive;
+font-size:48px;
+color:#d04c9b;
+margin-bottom:10px;
+}
+
+.address{
+font-size:12px;
+color:#666;
+max-width:700px;
+margin:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+    
+<!-- HEADER FROM HOME PAGE -->
+
+<header>
+
+<a href="index.html">HOME</a>
+<a href="#">ABOUT</a>
+<a href="destination_pg.html" class="active-link">DESTINATION<br><span>WEDDING</span></a>
+<a href="#">SERVICES</a>
+
+<div class="logo">kyc</div>
+
+<a href="#">BOOK VENUE</a>
+<a href="#">GALLERY</a>
+<a href="#">NEWS</a>
+<a href="#">BLOG</a>
+
+</header>
+
+<!-- TABS -->
+
+<div class="tabs">
+<div id="indianTab" class="tab active" onclick="showIndian()">Indian Destinations</div>
+<div id="internationalTab" class="tab inactive" onclick="showInternational()">International Destinations</div>
+</div>
+
+<!-- INDIAN DESTINATIONS -->
+
+<div id="indianSection">
+
+<div class="title">Indian Destinations</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<p>W, Goa</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<p>Ananta, Udaipur</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596436889106-be35e843f974">
+<p>Fairmont, Jaipur</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1564507592333-c60657eea523">
+<p>Grand Hyatt, Mumbai</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2105c">
+<p>Leela Palace, Udaipur</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+<p>Rambagh Palace, Jaipur</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<p>Taj Exotica</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505692794403-55c5e6e0b7c0">
+<p>JW Marriott</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- INTERNATIONAL DESTINATIONS -->
+
+<div id="internationalSection" style="display:none;">
+
+<div class="title">International Destinations</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<p>Bali, Indonesia</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+<p>Phuket, Thailand</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98">
+<p>Dubai, UAE</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<p>Maldives Resort</p>
+</div>
+
+<!-- SECOND ROW -->
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21">
+<p>Paris, France</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60f">
+<p>Santorini, Greece</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1">
+<p>Rome, Italy</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef">
+<p>Singapore</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DESTINATION WEDDINGS -->
+
+<section class="destination-hero">
+
+<div class="destination-overlay">
+<h1>Destination Weddings</h1>
+<p>Dream Weddings at Exotic Locations</p>
+<button>PLAN YOUR WEDDING</button>
+</div>
+
+<div class="wedding-cards">
+
+<div class="w-card">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<div class="w-overlay">
+<h3>Beach Wedding</h3>
+<p>Serene beach ceremonies</p>
+<button class="w-btn">See Ventures</button>
+</div>
+</div>
+
+<div class="w-card">
+<img src="https://images.unsplash.com/photo-1596436889106-be35e843f974">
+<div class="w-overlay">
+<h3>Royal Palace</h3>
+<p>Luxury heritage weddings</p>
+<button class="w-btn">See Ventures</button>
+</div>
+</div>
+
+<div class="w-card">
+<img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e">
+<div class="w-overlay">
+<h3>Garden Wedding</h3>
+<p>Outdoor floral celebrations</p>
+<button class="w-btn">See Ventures</button>
+</div>
+</div>
+
+<div class="w-card">
+<img src="https://images.unsplash.com/photo-1519222970733-f546218fa6d7">
+<div class="w-overlay">
+<h3>Luxury Resort</h3>
+<p>Premium resort weddings</p>
+<button class="w-btn">See Ventures</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+function showIndian(){
+document.getElementById("indianSection").style.display="block";
+document.getElementById("internationalSection").style.display="none";
+document.getElementById("indianTab").classList.add("active");
+document.getElementById("indianTab").classList.remove("inactive");
+document.getElementById("internationalTab").classList.add("inactive");
+document.getElementById("internationalTab").classList.remove("active");
+}
+
+function showInternational(){
+document.getElementById("indianSection").style.display="none";
+document.getElementById("internationalSection").style.display="block";
+document.getElementById("internationalTab").classList.add("active");
+document.getElementById("internationalTab").classList.remove("inactive");
+document.getElementById("indianTab").classList.add("inactive");
+document.getElementById("indianTab").classList.remove("active");
+}
+
+</script>
+
+
+<!-- FOOTER FROM HOME PAGE -->
+
+<section class="footer-links">
+
+<div class="footer-column">
+
+<h3>Social</h3>
+
+<p>INSTAGRAM</p>
+<p>FACEBOOK</p>
+<p>TWITTER</p>
+<p>YOU TUBE</p>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<p>HOME</p>
+<p>SERVICES</p>
+<p>BOOK APPOINTMENT</p>
+<p>SITE MAP</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-logo">kyc</div>
+
+<p class="address">
+1005 A, 10th Floor, B - Wing, Kanakia Wall Street, Chakala,
+Andheri Kurla Road, Andheri (East), Mumbai - 400093.
+</p>
+
+</footer>
+</body>
+</html>
