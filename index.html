@@ -12,7 +12,7 @@ font-family:Arial, Helvetica, sans-serif;
 background:#e8e2d9;
 }
 
-/* NAVBAR */
+/* HEADER */
 
 header{
 display:flex;
@@ -29,13 +29,13 @@ header a{
 text-decoration:none;
 color:#555;
 font-weight:600;
-font-family:"Segoe UI", "Helvetica Neue", Arial, sans-serif;
+font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
 font-style:italic;
 text-transform:uppercase;
 letter-spacing:1.5px;
 padding:6px 10px;
 border-radius:999px;
-transition:background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+transition:background 0.2s ease,color 0.2s ease,transform 0.2s ease;
 }
 
 header a:hover{
@@ -43,17 +43,45 @@ background:rgba(208,76,155,0.16);
 color:#d04c9b;
 transform:translateY(-1px);
 }
-.logo{
-font-size:28px;
-font-family:'Great Vibes', 'Playfair Display', cursive;
-letter-spacing:1px;
-color:#d04c9b;
-font-weight:400;
-}
+
 .active-link{
 background:rgba(208,76,155,0.20);
 color:#d04c9b;
 border-bottom:2px solid #d04c9b;
+}
+
+.logo{
+font-size:28px;
+font-family:'Great Vibes','Playfair Display',cursive;
+letter-spacing:1px;
+color:#d04c9b;
+font-weight:400;
+}
+
+/* TAB SECTION */
+
+.tabs{
+width:80%;
+margin:40px auto;
+display:flex;
+}
+
+.tab{
+flex:1;
+text-align:center;
+padding:18px;
+font-size:24px;
+cursor:pointer;
+}
+
+.active{
+background:#f2f2f2;
+border-bottom:4px solid #c17a57;
+}
+
+.inactive{
+background:#ded8ce;
+border-bottom:3px solid #999;
 }
 
 /* HERO IMAGE GRID */
@@ -514,7 +542,7 @@ margin:auto;
 
 <a href="#" class="active-link">HOME</a>
 <a href="#">ABOUT</a>
-<a href="destination_pg.html">DESTINATION<br><span style="align-items: center;">WEDDING</span></a>
+<a href="destination_pg.html">DESTINATION<br>WEDDING</a>
 <a href="#">SERVICES</a>
 
 <div class="logo">kyc</div>
@@ -523,10 +551,9 @@ margin:auto;
 <a href="#">GALLERY</a>
 <a href="#">NEWS</a>
 <a href="#">BLOG</a>
+<a href="conatct_pg.html">CONTACT</a>
 
 </header>
-
-
 
 <section class="hero">
 

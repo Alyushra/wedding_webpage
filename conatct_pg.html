@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact - KYC Events</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Georgia, serif;
+background:#ded8ce;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+padding:15px;
+background:#efe9df;
+font-size:12px;
+letter-spacing:1px;
+}
+
+header a{
+text-decoration:none;
+color:#555;
+font-weight:600;
+font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+font-style:italic;
+text-transform:uppercase;
+letter-spacing:1.5px;
+padding:6px 10px;
+border-radius:999px;
+transition:background 0.2s ease,color 0.2s ease,transform 0.2s ease;
+}
+
+header a:hover{
+background:rgba(208,76,155,0.16);
+color:#d04c9b;
+transform:translateY(-1px);
+}
+
+.active-link{
+background:rgba(208,76,155,0.20);
+color:#d04c9b;
+border-bottom:2px solid #d04c9b;
+}
+
+.logo{
+font-size:28px;
+font-family:'Great Vibes','Playfair Display',cursive;
+letter-spacing:1px;
+color:#d04c9b;
+font-weight:400;
+}
+
+/* TAB SECTION */
+
+.tabs{
+width:80%;
+margin:40px auto;
+display:flex;
+}
+
+.tab{
+flex:1;
+text-align:center;
+padding:18px;
+font-size:24px;
+cursor:pointer;
+}
+
+.active{
+background:#f2f2f2;
+border-bottom:4px solid #c17a57;
+}
+
+.inactive{
+background:#ded8ce;
+border-bottom:3px solid #999;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+font-size:42px;
+margin:50px 0 20px;
+color:#555;
+}
+
+/* CONTACT CONTAINER */
+
+.contact-container{
+width:80%;
+margin:auto;
+display:flex;
+gap:40px;
+margin-bottom:60px;
+}
+
+/* LEFT SIDE - NEW DESIGN */
+
+.contact-info{
+flex:1;
+padding:30px;
+border-radius:10px;
+background:linear-gradient(135deg,#d04c9b,#ff9ac6);
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.contact-info h3{
+margin-bottom:20px;
+font-size:24px;
+}
+
+.contact-info p{
+font-size:14px;
+margin-bottom:15px;
+color:white;
+}
+
+/* FORM */
+
+.contact-form{
+flex:2;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group{
+display:flex;
+gap:20px;
+margin-bottom:15px;
+}
+
+.form-group input{
+flex:1;
+padding:10px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+textarea{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:4px;
+margin-top:10px;
+}
+
+.submit-btn{
+margin-top:15px;
+padding:10px 25px;
+border:none;
+background:#d04c9b;
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+.submit-btn:hover{
+background:#b93b87;
+}
+
+/* FOOTER */
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:60px;
+text-align:center;
+}
+
+.footer-column h3{
+font-family:"Playfair Display",serif;
+margin-bottom:15px;
+}
+
+.footer-column p{
+font-size:12px;
+color:#666;
+}
+
+.divider{
+width:1px;
+height:120px;
+background:#cfc8bf;
+}
+
+footer{
+text-align:center;
+margin-top:40px;
+padding-bottom:40px;
+}
+
+.footer-logo{
+font-family:"Great Vibes",cursive;
+font-size:48px;
+color:#d04c9b;
+}
+
+.address{
+font-size:12px;
+color:#666;
+max-width:700px;
+margin:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<a href="index.html">HOME</a>
+<a href="#">ABOUT</a>
+<a href="destination_pg.html">DESTINATION<br>WEDDING</a>
+<a href="#">SERVICES</a>
+
+<div class="logo">kyc</div>
+
+<a href="#">BOOK<br>  VENUE</a>
+<a href="#">GALLERY</a>
+<a href="#">NEWS</a>
+<a href="#">BLOG</a>
+<a href="contact.html" class="active-link">CONTACT</a>
+</header>
+
+<!-- TITLE -->
+
+<div class="title">Contact Us</div>
+
+<!-- CONTACT SECTION -->
+
+<div class="contact-container">
+
+<!-- LEFT SIDE (UPDATED DESIGN) -->
+
+<div class="contact-info">
+<h3>Let’s Connect 💌</h3>
+
+<p>We are here to make your dream wedding a beautiful reality.</p>
+
+<p>📍 <b>Location</b><br>
+Mumbai, India</p>
+
+<p>📧 <b>Email</b><br>
+info@kycevents.in</p>
+
+<p>📞 <b>Phone</b><br>
++91 98765 43210</p>
+
+<p>💖 Let’s plan something magical together!</p>
+</div>
+
+<!-- RIGHT FORM -->
+
+<div class="contact-form">
+
+<div class="form-group">
+<input type="text" id="fname" placeholder="First Name">
+<input type="text" id="lname" placeholder="Last Name">
+</div>
+
+<div class="form-group">
+<input type="email" id="email" placeholder="Email">
+<input type="tel" id="phone" placeholder="Phone">
+</div>
+
+<div class="form-group">
+<input type="text" id="bride" placeholder="Bride Name">
+<input type="text" id="groom" placeholder="Groom Name">
+</div>
+
+<div class="form-group">
+<input type="text" id="destination" placeholder="Preferred Destination">
+<input type="text" id="hotel" placeholder="Hotel">
+</div>
+
+<textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+<button class="submit-btn" onclick="validateForm()">Submit</button>
+
+<p id="errorMsg" style="color:red; margin-top:10px; display:none;">
+⚠️ Please fill all the details!
+</p>
+
+<p id="successMsg" style="color:green; margin-top:10px; display:none;">
+✅ Your details have been submitted successfully!
+</p>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<section class="footer-links">
+
+<div class="footer-column">
+<h3>Social</h3>
+<p>INSTAGRAM</p>
+<p>FACEBOOK</p>
+<p>TWITTER</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="footer-column">
+<h3>Quick Links</h3>
+<p>HOME</p>
+<p>SERVICES</p>
+<p>BOOK APPOINTMENT</p>
+</div>
+
+</section>
+
+<footer>
+<div class="footer-logo">kyc</div>
+<p class="address">
+1005 A, 10th Floor, B - Wing, Kanakia Wall Street,
+Andheri East, Mumbai - 400093.
+</p>
+</footer>
+
+<script>
+function validateForm(){
+
+    let fname = document.getElementById("fname").value;
+    let lname = document.getElementById("lname").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let bride = document.getElementById("bride").value;
+    let groom = document.getElementById("groom").value;
+    let destination = document.getElementById("destination").value;
+    let hotel = document.getElementById("hotel").value;
+    let message = document.getElementById("message").value;
+
+    if(fname=="" || lname=="" || email=="" || phone=="" || bride=="" || groom=="" || destination=="" || hotel=="" || message==""){
+
+        document.getElementById("errorMsg").style.display="block";
+        document.getElementById("successMsg").style.display="none";
+
+    }else{
+
+        document.getElementById("errorMsg").style.display="none";
+        document.getElementById("successMsg").style.display="block";
+
+        // clear form
+        document.querySelectorAll("input, textarea").forEach(el => el.value="");
+    }
+}
+</script>
+
+</body>
+</html>
